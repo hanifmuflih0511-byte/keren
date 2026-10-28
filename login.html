@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UPI CareerPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="login-page">
+        <div class="login-card">
+            <div class="login-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <span>UPI CareerPath</span>
+            </div>
+
+            <h2>Selamat Datang!</h2>
+            <p class="login-subtitle">Masuk untuk melanjutkan perjalananmu.</p>
+
+            <div class="login-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="daftar">Daftar</button>
+            </div>
+
+            <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" placeholder="Masukkan NIM" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan username" required>
+                </div>
+
+                <div class="form-group register-field" id="emailField" style="display: none;">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email">
+                </div>
+
+                <div class="form-group register-field" id="namaField" style="display: none;">
+                    <label for="namaLengkap">Nama Lengkap</label>
+                    <input type="text" id="namaLengkap" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <button type="button" class="login-btn" id="submitBtn">Login</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Belum punya akun? <a href="#" id="daftarLink">Daftar di sini</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const submitBtn = document.getElementById('submitBtn');
+        const registerFields = document.querySelectorAll('.register-field');
+        const daftarLink = document.getElementById('daftarLink');
+
+        function switchTab(tab) {
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.tab === tab) {
+                    btn.classList.add('active');
+                }
+            });
+
+            if (tab === 'daftar') {
+                registerFields.forEach(field => field.style.display = 'block');
+                submitBtn.textContent = 'Daftar';
+            } else {
+                registerFields.forEach(field => field.style.display = 'none');
+                submitBtn.textContent = 'Login';
+            }
+        }
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchTab(btn.dataset.tab);
+            });
+        });
+
+        daftarLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchTab('daftar');
+        });
+
+        submitBtn.addEventListener('click', () => {
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+
+</body>
+</html>

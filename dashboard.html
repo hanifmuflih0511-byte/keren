@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - UPI CareerPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Dashboard Navbar -->
+    <nav class="dashboard-navbar">
+        <a href="dashboard.html" class="navbar-brand">
+            <div class="logo-icon"><i class="fas fa-compass"></i></div>
+            <span>UPI CareerPath</span>
+        </a>
+        <div class="search-bar-small">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Cari peluang, magang, lomba...">
+        </div>
+        <div class="nav-actions">
+            <button class="notif-btn">
+                <i class="fas fa-bell"></i>
+                <span class="badge"></span>
+            </button>
+            <div class="avatar">H</div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="logo-icon"><i class="fas fa-compass"></i></div>
+                <span>UPI CareerPath</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Beranda</span>
+                </a>
+                <a href="karier.html">
+                    <i class="fas fa-route"></i>
+                    <span>Jalur Karier</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-th-large"></i>
+                    <span>Semua Peluang</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorit</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifikasi</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Profil</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Dashboard Greeting -->
+            <div class="dashboard-greeting">
+                <h1>Halo, Mahasiswa UPI!</h1>
+                <p>Temukan peluang terbaik untuk mengembangkan potensimu dan kariermu.</p>
+            </div>
+
+            <!-- Jalur Karier Section -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Jalur Karier</h2>
+                    <a href="karier.html">Lihat Semua</a>
+                </div>
+                <div class="dashboard-career-grid">
+                    <a href="kategori.html" class="dashboard-career-card">
+                        <div class="icon" style="background: #dbeafe; color: #2563eb;">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h4>Cyber Security</h4>
+                    </a>
+                    <a href="kategori.html" class="dashboard-career-card">
+                        <div class="icon" style="background: #d1fae5; color: #059669;">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>Network Engineer</h4>
+                    </a>
+                    <a href="kategori.html" class="dashboard-career-card">
+                        <div class="icon" style="background: #fef3c7; color: #d97706;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>AI Engineer</h4>
+                    </a>
+                    <a href="kategori.html" class="dashboard-career-card">
+                        <div class="icon" style="background: #e0e7ff; color: #4f46e5;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Programming</h4>
+                    </a>
+                    <a href="kategori.html" class="dashboard-career-card">
+                        <div class="icon" style="background: #fce7f3; color: #db2777;">
+                            <i class="fas fa-tower-cell"></i>
+                        </div>
+                        <h4>Fiber Optic</h4>
+                    </a>
+                    <a href="kategori.html" class="dashboard-career-card">
+                        <div class="icon" style="background: #ccfbf1; color: #0d9488;">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4>IoT</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Peluang Terbaru Section -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Peluang Terbaru</h2>
+                    <a href="#">Lihat Semua</a>
+                </div>
+                <div class="opportunity-list">
+                    <a href="detail.html" class="opportunity-item">
+                        <div class="opp-info">
+                            <h4>
+                                Magang Network Engineer - Telkom
+                                <span class="tag tag-magang">Magang</span>
+                            </h4>
+                            <div class="opp-meta">
+                                <span><i class="far fa-calendar"></i> 21 Mar 2025</span>
+                                <span class="tag tag-online">Online</span>
+                            </div>
+                        </div>
+                        <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+                    <a href="detail.html" class="opportunity-item">
+                        <div class="opp-info">
+                            <h4>
+                                Lomba Hackathon Cyber Security
+                                <span class="tag tag-lomba">Lomba</span>
+                            </h4>
+                            <div class="opp-meta">
+                                <span><i class="far fa-calendar"></i> 25 Mar 2025</span>
+                                <span class="tag tag-online">Online</span>
+                            </div>
+                        </div>
+                        <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+                    <a href="detail.html" class="opportunity-item">
+                        <div class="opp-info">
+                            <h4>
+                                Beasiswa S2 Teknologi Informasi
+                                <span class="tag tag-beasiswa">Beasiswa</span>
+                            </h4>
+                            <div class="opp-meta">
+                                <span><i class="far fa-calendar"></i> 10 Mar 2025</span>
+                                <span class="tag tag-online">Online</span>
+                            </div>
+                        </div>
+                        <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
